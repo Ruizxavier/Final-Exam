@@ -1,0 +1,345 @@
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+    height: 80px;
+}
+
+.brand-box {
+    background-color: lightblue;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    color: darkblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.subheading {
+    color: darkblue;
+    font-size: 1rem;
+}
+
+nav {
+    background-color: darkblue;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-links a:hover {
+    color: lightblue;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Info Container */
+.info-container {
+    background-color: lightblue;
+    padding: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.info-container p {
+    color: darkblue;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.service-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.service-item ul {
+    list-style-position: inside;
+    padding: 1rem;
+}
+
+/* Booking Form */
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.booking-form button {
+    background: darkblue;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background: #000080;
+}
+
+/* Pricing Table */
+.pricing-table {
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#pricing {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+}
+
+#pricing td, #pricing th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+#pricing th {
+    background-color: darkblue;
+    color: white;
+    padding: 12px;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.hours {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: lightblue;
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+footer p {
+    color: darkblue;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: flex;
+        position: relative;
+        background-color: darkblue;
+        width: auto;
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Pricing Table */
+.pricing-table {
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#pricing {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+}
+
+#pricing td, #pricing th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+#pricing th {
+    background-color: darkblue;
+    color: white;
+    padding: 12px;
+}
+
+/* Adding back the specific row colors */
+#pricing tr:nth-child(1) {
+    background-color: #ADD8E6; /* Light blue */
+}
+
+#pricing tr:nth-child(2) {
+    background-color: #99CEE6; /* Slightly darker blue */
+}
+
+#pricing tr:nth-child(3) {
+    background-color: #86C5E6; /* Even darker blue */
+}
+
+#pricing tr:nth-child(4) {
+    background-color: #73BBE6; /* Darkest blue */
+}
+
+#pricing tr:nth-child(5) {
+    background-color: #79B0E6; /* Darker blue */
+}
+
+#pricing tr:nth-child(6) {
+    background-color: #79B0E6; /* Darker blue */
+}
+
+/* Booking Form */
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-form fieldset {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: none; /* Removed the fieldset border */
+    background: none;
+}
+
+.booking-form legend {
+    color: darkblue;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.booking-form button {
+    background: darkblue;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background: #000080;
+}
+
+.service-options {
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.service-options label {
+    display: block;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.service-options h4 {
+    margin-bottom: 0.5rem;
+    color: darkblue;
+}

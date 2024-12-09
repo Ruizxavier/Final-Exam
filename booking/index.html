@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Book Now - Scrub-A-Dog</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="brand-box">
+                <div class="logo">Scrub-A-Dog</div>
+                <div class="subheading">Clean Pets. Clean Owners</div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services/index.html">Services</a></li>
+                    <li><a href="/booking/index.html">Book Now</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="info-container">
+        <h2>Book an Appointment</h2>
+        <form class="booking-form" method="POST">
+            <fieldset>
+                <legend>Customer Information</legend>
+                <input type="text" placeholder="Your Name" required>
+                <input type="text" placeholder="Pet's Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number (123-456-7890)" required>
+                <input type="date" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Service Request</legend>
+                <div class="service-options">
+                    <h4>Select Service Type:</h4>
+                    <label>
+                        <input type="radio" name="service" value="basic" required>
+                        Basic Bath Package
+                    </label>
+                    <label>
+                        <input type="radio" name="service" value="full">
+                        Full Groom Package
+                    </label>
+                    <label>
+                        <input type="radio" name="service" value="deluxe">
+                        Deluxe Package
+                    </label>
+                </div>
+
+                <select required>
+                    <option value="">Preferred Groomer</option>
+                    <option value="sarah">Sarah Johnson</option>
+                    <option value="mike">Mike Wilson</option>
+                    <option value="emma">Emma Davis</option>
+                    <option value="james">James Smith</option>
+                </select>
+
+                <textarea placeholder="Special Instructions"></textarea>
+                <button type="submit">Book Now</button>
+            </fieldset>
+        </form>
+    </div>
